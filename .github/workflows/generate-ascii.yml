@@ -13,5 +13,5 @@ jobs:
         cat README.md
     - name: Execute shell script
       run: |
-        chmod +x
+        chmod +x ./ascii-script.sh
         ./ascii-script.sh
