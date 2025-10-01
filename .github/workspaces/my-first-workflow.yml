@@ -1,0 +1,17 @@
+name: My First Workflow
+on: [push]
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v5.0.0
+    - name: Welcome List Files and Read README
+      run: |
+        echo "Hello, World!"
+        ls -ltra
+        cat README.md
+    - name: Generate ASCII Artwork
+      run: |
+        cowsay -f dragon "Run for cover, I am a DRAGON...RRRRAAAAGGGGGOOOOONNNN!!!" >> dragon.txt
+        cat dragon.txt
