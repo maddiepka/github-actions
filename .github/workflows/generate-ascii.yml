@@ -12,4 +12,6 @@ jobs:
         ls -ltra
         cat README.md
     - name: Execute shell script
-      run ./ascii-script.sh
+      run: |
+        chmod +x
+        ./ascii-script.sh
