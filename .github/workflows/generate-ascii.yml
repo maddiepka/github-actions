@@ -11,14 +11,5 @@ jobs:
         echo "Hello, World!"
         ls -ltra
         cat README.md
-    - name: Install Cowsay
-      run: sudo apt-get install -y cowsay
-    - name: Generate ASCII Artwork
-      run: |
-        cowsay -f dragon "Run for cover, I am a DRAGON...RRRRAAAAGGGGGOOOOONNNN!!!" >> dragon.txt
-    - name: Check if file exists
-      run: grep -i "dragon" dragon.txt
-    - name: Read file
-      run: cat dragon.txt
-    - name: Check repository
-      run: ls 
+    - name: Execute shell script
+      run ./ascii-script.sh
